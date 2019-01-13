@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Thasadith');
+
+
+.home-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: url('usa.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  font-family: 'Thasadith', sans-serif;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 37, 41, 0.6);
+}
+
+/*  Header */
+
+header {
+  width: 100%;
+  height: 10%;
+  background-color: white;
+}
+
+nav {
+  width: 100%;
+  text-align: left;
+  padding: 10px 0px 10px 50px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#logo {
+  font-size: 2em;
+  font-family: 'Staatliches', cursive;
+}
+
+.home-hero-content {
+  width: 100%;
+  height: 70%;
+  padding-top: 12%;
+}
+
+.home-hero-cta {
+  width: 100%;
+  height: 40%;
+}
+
+.main-slogan {
+  font-size: 4em;
+  color: white;
+  font-family: 'Staatliches', cursive;
+}
+
+.main-valprop {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: white;
+}
+
+.cta {
+  padding: 15px 100px;
+  background-color: black;
+  border-radius: 100px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: #25282B;
+}
+
+.home-hero-landing {
+  height: 90%;
+  width: 100%;
+}
+
+/* Main Section */
+
+.product-summary {
+  width: 100%;
+  margin: 100px 0px;
+}
+
+.summary-paragraph {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.summary-paragraph h3 {
+  font-family: 'Staatliches', cursive;
+  font-size: 2.25em;
+}
+
+.summary-paragraph h4 {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.5em;
+  color: #383D42;
+}
+
+.summary-paragraph p {
+  margin: 40px 0px 40px 0px;
+  font-size: 1.25em;
+  text-align: left;
+  font-weight: bold;
+}
+
+.question {
+  margin: 10px 0px;
+}
+
+.question h5 {
+  font-size: 1.25em;
+  font-style: italic;
+  text-align: left;
+  font-weight: bolder:
+}
+
+.question p {
+  text-align: left;
+}
+
+/* Footer */
+
+
+footer {
+  width: 100%;
+  background-color: black;
+}
+
+.footer-menu {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid white;
+}
+
+.footer-menu-left {
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+  color: white;
+}
+
+span {
+  padding-left: 1.5em;
+}
+
+.footer-menu-right {
+  width: 75%;
+  display: inline-block;
+  text-align: right;
+}
+
+ul > li {
+    list-style: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 0 2.5px;
+}
+
+span {
+  text-decoration: none;
+  color: #8D8C8D;
+  cursor: pointer;
+}
+
+.footer-menu-right-link:hover {
+  color: #10A400;
+}
+
+.sign-up {
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.sign-up h2 {
+  color: white;
+  font-size: 1.75em;
+  margin: 50px 0;
+  font-family: 'Staatliches', cursive;
+}
+
+.sign-up form {
+  width: 100%;
+}
+
+form input {
+  display: block;
+  margin: 10px auto;
+  padding: 20px;
+  width: 40%;
+  border-radius: 50px;
+  border: none;
+  font-size: 15px;
+  font-family: 'Thasadith', sans-serif;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+  margin: 20px 0px 50px 0px;
+  width: 15%;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: 'Thasadith', sans-serif;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+
+@media (max-width: 600px ) and (min-width: 200px) {
+
+  .home-hero-content {
+    height: 70%;
+  }
+
+  .home-hero-cta {
+    height: 30%;
+  }
+
+  .main-slogan {
+    font-size: 3.25em;
+  }
+
+  .main-valprop {
+    font-size: 1.1em;
+  }
+
+  .cta {
+    padding: 10px 40px;
+  }
+
+  .home-hero-landing {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .summary-paragraph {
+    width: 90%;
+  }
+
+  .sign-up {
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .sign-up h2 {
+    color: white;
+    font-size: 1.75em;
+    margin: 50px 0;
+    font-family: 'Staatliches', cursive;
+  }
+
+  .sign-up form {
+    width: 100%;
+  }
+
+  form input {
+    width: 80%;
+  }
+
+  form button {
+    width: 60%;
+  }
+}

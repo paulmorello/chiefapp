@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Chief App</title>
+  </head>
+  <body>
+    <div class="home-wrapper">
+
+      <section class="landing-page">
+
+        <header>
+          <nav>
+            <a class="logo" id="logo" href="#join-waitlist">Chief App</a>
+          </nav>
+        </header>
+
+        <section class="home-hero-landing">
+          <div class="home-hero-content">
+            <h1 class="main-slogan">Be more productive, reach your goals</h1>
+            <h2 class="main-valprop">New York City is a grind, prioritize your time and make your side hustle a reality.</h2>
+          </div>
+          <div class="home-hero-cta">
+            <a class="cta" href="#join-waitlist">Join the waitlist</a>
+          </div>
+        </section>
+
+      </section>
+
+      <section class="product-summary">
+        <div class="summary-paragraph">
+            <h3>You need to make the most of your time to start your business</h3>
+            <p>You work long hours, then go out with your friends, your time is scarce and it's important to make the most of it if you want to achieve your goals.</p>
+            <p>We all have dreams of creating a successful business so we can relieve ourselves of the daily 9 to 5. Unfortunately, without dedicating the time it's impossible.</p>
+            <p>We can help you find time you didn't know you had and make valuable strides towards your goal.</p>
+        </div>
+      </section>
+
+      <section class="benefit-one">
+        <div class="summary-paragraph">
+            <h4>Improve your productivity with smaller tasks</h4>
+            <p>Building a business is a big goal, but it doesn't need to stay that way. Chief helps you break your business down into small tasks that you can complete in short periods of time. Smaller tasks are easier to prioritize and fit into your busy work schedule.</p>
+            <p>After you break down your business idea, you'll begin to understand how long each task will take to complete. Associating time to your tasks helps you find open gaps in your calendar, making you more productive.</p>
+            <a class="cta" href="#join-waitlist">Join the waitlist</a>
+        </div>
+      </section>
+
+      <section class="benefit-two">
+        <div class="summary-paragraph">
+            <h4>Reach your goals sooner</h4>
+            <p>When your goal has been broken down into smaller tasks and those tasks have an expected time to complete, it becomes easier to allocate time for them during your week.</p>
+            <p>You can use your spare time to complete less time intensive tasks and save the larger ones for later. By operating in this way, you will continually take small steps toward completing the overall goal, making you more productive.</p>
+            <p>After a short period of time, you'll notice your making major strides and your business isn't so far away.</p>
+        </div>
+      </section>
+
+      <section class="benefit-three">
+        <div class="summary-paragraph">
+            <h4>Make consistent progress and reflect on what you've done</h4>
+            <p>Once you start crossing tasks off your list, you'll begin to see your progress, giving you an opportunity to reflect on what you've done, keeping you motivated.</p>
+            <p>We help you visualize your completed tasks and keep track of your goal. It feels good to cross items off your list and reach your goal.</p>
+            <a class="cta" href="#join-waitlist">Join the waitlist</a>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="summary-paragraph">
+            <h4>Frequently Asked Questions</h4>
+
+            <div class="question">
+              <h5>How does this product differ to a normal task management app?</h5>
+              <p>Traditional task management apps are designed to help organize day to day tasks, they’re not designed to help you reach a your life goals. The Chief app will help you break down your important life goals into small tasks that you can start completing now.</p>
+            </div>
+
+            <div class="question">
+              <h5>What is the cost?</h5>
+              <p>No cost, it’s free!</p>
+            </div>
+
+            <div class="question">
+              <h5>Does it matter what business I want to start?</h5>
+              <p>No. You can have any business idea in mind. Chief will help you to think small and break it into small chunks.</p>
+            </div>
+
+            <div class="question">
+              <h5>What are some example business use cases?</h5>
+              <p>You can use Chief for any type of business. You can use it to track the development of your app idea, keep on top of content for a blog or even the tasks required for a cafe.</p>
+            </div>
+
+            <div class="question">
+              <h5>Will I be able to receive reminders?</h5>
+              <p>Yes. You can set reminders and receive notifications to keep you on track.</p>
+            </div>
+
+            <div class="question">
+              <h5>Is it hard to get started?</h5>
+              <p>No. Set up is simple. Chief will ask you what type of business you want to start and then you can start creating your tasks.</p>
+            </div>
+            <a class="cta" href="#join-waitlist">Join the waitlist</a>
+        </div>
+      </section>
+
+      <footer id="join-waitlist">
+        <div class="sign-up">
+          <h2>Sign up to be a part of the Beta and join the waitlist</h2>
+          <form action="">
+            <input type="email" placeholder="Email Address">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <button id="sign-up-btn">Sign me up!</button>
+          </form>
+        </div>
+
+        <div class="footer-menu">
+          <nav>
+            <div class="footer-menu-left">
+              <p><a class="logo">Chief &trade;</a></p>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Woopra Page View tracking -->
+    <script>woopra.track();</script>
+    <!-- Woopra Demo Sign Up event -->
+    <script>
+
+    let demoBtn = document.getElementById('demo-btn');
+    let inputVal = document.getElementById('demo-input');
+    let successMessage = document.getElementById('demo-success');
+    let errorMessage = document.getElementById('demo-error');
+    let isErrorHidden = true;
+    let isSuccessHidden = true;
+
+    demoBtn.addEventListener('click', function() {
+
+      if (inputVal.value.includes('.com')) {
+
+        // Woopra tracking demo sign up
+        woopra.identify({
+          email: inputVal.value
+        });
+
+        woopra.track('demo-sign-up', {
+          email: inputVal.value
+        })
+
+        if (isSuccessHidden) {
+          if(!isErrorHidden) {
+            errorMessage.classList += ' hidden';
+            isErrorHidden = true;
+          }
+          // show success message
+          successMessage.classList.remove('hidden');
+          isSuccessHidden = false;
+        } else {
+          successMessage.classList += ' hidden';
+          isSuccessHidden = true;
+        }
+
+      } else {
+        if (isErrorHidden) {
+          if(!isSuccessHidden) {
+            successMessage.classList += ' hidden';
+            isSuccessHidden = true;
+          }
+          // show error message
+          errorMessage.classList.remove('hidden');
+          isErrorHidden = false;
+        } else {
+          errorMessage.classList += ' hidden';
+          isErrorHidden = true;
+        }
+      }
+    });
+
+    </script>
+
+  </body>
+</html>
