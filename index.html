@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+
+    <!-- Start of Woopra Code -->
+    <script>
+      (function(){
+        var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+      })("woopra");
+
+      woopra.config({
+          domain: 'dev.proscoutapp.com'
+      });
+      woopra.track();
+    </script>
+    <!-- End of Woopra Code -->
+
     <title>Chief App</title>
+
   </head>
   <body>
     <div class="home-wrapper">
@@ -124,61 +140,8 @@
       </footer>
     </div>
 
-    <!-- Woopra Page View tracking -->
-    <script>woopra.track();</script>
-    <!-- Woopra Demo Sign Up event -->
-    <script>
 
-    let demoBtn = document.getElementById('demo-btn');
-    let inputVal = document.getElementById('demo-input');
-    let successMessage = document.getElementById('demo-success');
-    let errorMessage = document.getElementById('demo-error');
-    let isErrorHidden = true;
-    let isSuccessHidden = true;
-
-    demoBtn.addEventListener('click', function() {
-
-      if (inputVal.value.includes('.com')) {
-
-        // Woopra tracking demo sign up
-        woopra.identify({
-          email: inputVal.value
-        });
-
-        woopra.track('demo-sign-up', {
-          email: inputVal.value
-        })
-
-        if (isSuccessHidden) {
-          if(!isErrorHidden) {
-            errorMessage.classList += ' hidden';
-            isErrorHidden = true;
-          }
-          // show success message
-          successMessage.classList.remove('hidden');
-          isSuccessHidden = false;
-        } else {
-          successMessage.classList += ' hidden';
-          isSuccessHidden = true;
-        }
-
-      } else {
-        if (isErrorHidden) {
-          if(!isSuccessHidden) {
-            successMessage.classList += ' hidden';
-            isSuccessHidden = true;
-          }
-          // show error message
-          errorMessage.classList.remove('hidden');
-          isErrorHidden = false;
-        } else {
-          errorMessage.classList += ' hidden';
-          isErrorHidden = true;
-        }
-      }
-    });
-
-    </script>
+    <script src="index.js"></script>
 
   </body>
 </html>
