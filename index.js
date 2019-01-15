@@ -53,7 +53,7 @@ signUpBtn.addEventListener('click', function() {
     message.style.width = '40%';
     message.style.height = '60px';
     message.style.margin = '20px auto';
-    message.value = 'Success. You will receive a personal email';
+    message.textContent = 'Thank you for joing the waitlist. You will receive a personal email';
 
     console.log(message);
 
@@ -65,7 +65,7 @@ signUpBtn.addEventListener('click', function() {
     message.style.width = '40%';
     message.style.height = '60px';
     message.style.margin = '20px auto';
-    message.value = 'Please make sure all fields are correct';
+    message.textContent = 'Please make sure all fields are correct';
 
     console.log(message.value);
   }
