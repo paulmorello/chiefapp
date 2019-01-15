@@ -1,50 +1,55 @@
 console.log('working');
 
-let demoBtn = document.getElementById('demo-btn');
-let inputVal = document.getElementById('demo-input');
+let signUpBtn = document.getElementById('sign-up-btn');
+
 let successMessage = document.getElementById('demo-success');
 let errorMessage = document.getElementById('demo-error');
 let isErrorHidden = true;
 let isSuccessHidden = true;
 
-demoBtn.addEventListener('click', function() {
+getEmailAddress = () => {
+  let email = document.getElementById("email");
+  if (email) {
+    return email.value;
+  } else {
+    email = "This is not a valid email address";
+    return email;
+  }
+}
 
-  if (inputVal.value.includes('.com')) {
+signUpBtn.addEventListener('click', function() {
+  let email = getEmailAddress();
+  let firstName = document.getElementById('first-name').value;
+  let lastName = document.getElementById('last-name').value;
+  let message = document.getElementById('message')
 
-    // Woopra tracking demo sign up
+  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (regex.test(email) && firstName && lastName) {
+    // identify requestor by email
     woopra.identify({
-      email: inputVal.value
+      email: email,
+      first_name: firstName,
+      last_name: lastName
+    })
+    // send event to woopra to subscribe user to Mailchimp list
+    woopra.track('waitlist_joined', {
+      email: email,
+      first_name: firstName,
+      last_name: lastName
     });
 
-    woopra.track('demo-sign-up', {
-      email: inputVal.value
-    })
-
-    if (isSuccessHidden) {
-      if(!isErrorHidden) {
-        errorMessage.classList += ' hidden';
-        isErrorHidden = true;
-      }
-      // show success message
-      successMessage.classList.remove('hidden');
-      isSuccessHidden = false;
-    } else {
-      successMessage.classList += ' hidden';
-      isSuccessHidden = true;
-    }
+    // show success message
+    message.style.background = 'lightgreen';
+    message.style.color = 'green';
+    message.style.width = '40%';
+    message.value = 'Success. You will receive a personal email';
 
   } else {
-    if (isErrorHidden) {
-      if(!isSuccessHidden) {
-        successMessage.classList += ' hidden';
-        isSuccessHidden = true;
-      }
-      // show error message
-      errorMessage.classList.remove('hidden');
-      isErrorHidden = false;
-    } else {
-      errorMessage.classList += ' hidden';
-      isErrorHidden = true;
-    }
+    // show fail message
+    message.style.background = 'mistyrose';
+    message.style.color = 'red';
+    message.style.width = '40%';
+    message.value = 'Please make sure all fields are correct';
   }
 });
