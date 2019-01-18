@@ -54,6 +54,8 @@ signUpBtn.addEventListener('click', function() {
     message.style.height = '60px';
     message.style.margin = '20px auto';
     message.textContent = 'Thank you for joing the waitlist. You will receive a personal email';
+    
+    fbq('track', 'CompleteRegistration');
 
     console.log(message);
 
