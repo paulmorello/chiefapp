@@ -228,9 +228,7 @@ div button:hover {
 @media (max-width: 600px ) and (min-width: 200px) {
 
   .home-wrapper {
-    background: url("./nyc-vert.jpg");
-    position: relative;
-    background-attachment: scroll;
+    background: url("./new-york-vert-2.jpg");
   }
 
   .home-hero-content {
