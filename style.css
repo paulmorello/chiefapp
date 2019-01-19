@@ -229,6 +229,7 @@ div button:hover {
 
   .home-wrapper {
     background: url("./new-york-vert-2.jpg");
+    position: relative;
   }
 
   .home-hero-content {
