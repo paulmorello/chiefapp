@@ -1,5 +1,16 @@
-console.log('working');
 
+// Load event triggers changes
+const load = () => {
+  // page load checks
+  if (window.location.href.includes('fb_nycatx')) {
+    document.getElementsByClassName('main-valprop')[0].innerText = 'Life is a grind, prioritize your time and make your side hustle a reality.'
+  }
+}
+window.onload = load;
+
+
+
+// Sign up and email validation
 let signUpBtn = document.getElementById('sign-up-btn');
 
 let successMessage = document.getElementById('demo-success');
@@ -54,7 +65,7 @@ signUpBtn.addEventListener('click', function() {
     message.style.height = '60px';
     message.style.margin = '20px auto';
     message.textContent = 'Thank you for joing the waitlist. You will receive a personal email';
-    
+
     fbq('track', 'CompleteRegistration');
 
     console.log(message);

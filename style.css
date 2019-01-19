@@ -4,7 +4,7 @@
 .home-wrapper {
   width: 100%;
   height: 100vh;
-  background: url("usa.jpg") no-repeat center center fixed;
+  background: url("./usa.jpg") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   font-family: 'Thasadith', sans-serif;
@@ -228,7 +228,7 @@ div button:hover {
 @media (max-width: 600px ) and (min-width: 200px) {
 
   .home-wrapper {
-    background: url("nyc-vert.jpg") no-repeat center center fixed;    
+    background: url("./nyc-vert.jpg") no-repeat center center fixed;
   }
 
   .home-hero-content {
