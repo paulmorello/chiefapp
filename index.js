@@ -12,7 +12,6 @@ window.onload = load;
 
 // Sign up and email validation
 let signUpBtn = document.getElementById('sign-up-btn');
-
 let successMessage = document.getElementById('demo-success');
 let errorMessage = document.getElementById('demo-error');
 let isErrorHidden = true;
@@ -31,7 +30,7 @@ getEmailAddress = () => {
 }
 
 signUpBtn.addEventListener('click', function() {
-  console.log('clicked');
+
   let email = getEmailAddress();
   let firstName = document.getElementById('first-name').value;
   let lastName = document.getElementById('last-name').value;

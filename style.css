@@ -65,16 +65,17 @@ nav a {
 
 .cta {
   padding: 15px 100px;
-  background-color: black;
+  background-color: #2A6AE8;
   border-radius: 100px;
   color: white;
-  font-weight: bolder;
+  font-weight: 900;
   cursor: pointer;
   text-decoration: none;
 }
 
 .cta:hover {
-  background-color: #25282B;
+  background-color: #1B4494;
+  color: white;
 }
 
 .home-hero-landing {
