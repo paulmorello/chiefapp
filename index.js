@@ -2,7 +2,7 @@
 // Load event triggers changes
 const load = () => {
   // page load checks
-  if (window.location.href.includes('fb_nycatx')) {
+  if (window.location.href.includes('nycatx')) {
     document.getElementsByClassName('main-valprop')[0].innerText = 'Life is a grind, prioritize your time and make your side hustle a reality.'
   }
 }
