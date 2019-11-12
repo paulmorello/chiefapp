@@ -78,6 +78,10 @@ nav a {
   color: white;
 }
 
+.app_store {
+  width: 100px;
+}
+
 .home-hero-landing {
   height: 90%;
   width: 100%;
